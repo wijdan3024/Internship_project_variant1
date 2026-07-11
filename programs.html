@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programs — IronCore Gym</title>
+<meta name="description" content="Explore IronCore's coaching programs — personal training, group classes, strength conditioning, and nutrition coaching.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          obsidian: '#0B0C0E', obsidianSoft: '#131417', bone: '#F5F3EE',
+          steel: '#8A8F98', gold: '#B8863B', goldSoft: '#D4A857', iron: '#7A1F1F',
+        },
+        fontFamily: { display: ['Syne', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+      }
+    }
+  }
+</script>
+</head>
+
+<body class="font-body bg-obsidian text-bone">
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 px-6 md:px-12 py-5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="index.html" class="font-display text-xl md:text-2xl font-bold tracking-tight">
+      IRON<span class="text-gold">CORE</span>
+    </a>
+    <div class="hidden md:flex items-center gap-10 font-display text-sm tracking-wide">
+      <a href="index.html" class="nav-link text-bone hover:text-gold transition-colors">Home</a>
+      <a href="about.html" class="nav-link text-bone hover:text-gold transition-colors">About</a>
+      <a href="programs.html" class="nav-link text-gold">Programs</a>
+      <a href="membership.html" class="nav-link text-bone hover:text-gold transition-colors">Membership</a>
+      <a href="trainers.html" class="nav-link text-bone hover:text-gold transition-colors">Trainers</a>
+      <a href="contact.html" class="nav-link text-bone hover:text-gold transition-colors">Contact</a>
+    </div>
+    <a href="contact.html" class="hidden md:inline-block btn-primary px-6 py-2.5 text-sm">JOIN NOW</a>
+    <button id="menuBtn" class="md:hidden text-bone" aria-label="Open menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden mt-4 bg-obsidianSoft border border-white/10 rounded-lg p-6 flex flex-col gap-4 font-display text-sm">
+    <a href="index.html" class="text-bone hover:text-gold">Home</a>
+    <a href="about.html" class="text-bone hover:text-gold">About</a>
+    <a href="programs.html" class="text-gold">Programs</a>
+    <a href="membership.html" class="text-bone hover:text-gold">Membership</a>
+    <a href="trainers.html" class="text-bone hover:text-gold">Trainers</a>
+    <a href="contact.html" class="btn-primary text-center py-2.5">JOIN NOW</a>
+  </div>
+</nav>
+
+<!-- ===================== PAGE HERO ===================== -->
+<header class="hero-grid pt-40 pb-20 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <p class="eyebrow mb-4">What We Offer</p>
+      <h1 class="font-display font-extrabold text-5xl md:text-6xl leading-tight">
+        Programs built around your goal, not a template.
+      </h1>
+    </div>
+    <div class="reveal hidden md:block" style="transition-delay:0.15s">
+      <div class="aspect-[4/3] bg-obsidianSoft border border-white/10 rounded-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?q=80&w=1000" alt="Male athlete training at IronCore gym, face and body visible" class="img-intense w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== PROGRAMS GRID ===================== -->
+<section class="reveal max-w-7xl mx-auto px-6 md:px-12 py-16">
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <div class="card-panel rounded-lg p-10">
+      <p class="font-display text-gold text-sm mb-4">01 — STRENGTH</p>
+      <h3 class="font-display font-bold text-2xl mb-4">Personal Training</h3>
+      <p class="text-steel leading-relaxed mb-6">1-on-1 coaching built entirely around your body, schedule, and goals. Every session is logged and your program adjusts weekly based on real progress data.</p>
+      <ul class="text-steel text-sm space-y-2 mb-6">
+        <li>— Custom programming, updated weekly</li>
+        <li>— Form correction &amp; injury-safe coaching</li>
+        <li>— Direct coach access between sessions</li>
+      </ul>
+      <a href="contact.html" class="font-display text-gold text-sm border-b border-gold pb-1 hover:text-goldSoft transition-colors">GET STARTED →</a>
+    </div>
+
+    <div class="card-panel rounded-lg p-10">
+      <p class="font-display text-gold text-sm mb-4">02 — CONDITIONING</p>
+      <h3 class="font-display font-bold text-2xl mb-4">Group Classes</h3>
+      <p class="text-steel leading-relaxed mb-6">High-intensity group sessions that combine strength and conditioning work. Small class sizes so coaches can still correct your form in real time.</p>
+      <ul class="text-steel text-sm space-y-2 mb-6">
+        <li>— Max 12 athletes per class</li>
+        <li>— Rotating strength &amp; conditioning blocks</li>
+        <li>— Built-in accountability &amp; team energy</li>
+      </ul>
+      <a href="contact.html" class="font-display text-gold text-sm border-b border-gold pb-1 hover:text-goldSoft transition-colors">GET STARTED →</a>
+    </div>
+
+    <div class="card-panel rounded-lg p-10">
+      <p class="font-display text-gold text-sm mb-4">03 — RECOVERY</p>
+      <h3 class="font-display font-bold text-2xl mb-4">Strength &amp; Mobility</h3>
+      <p class="text-steel leading-relaxed mb-6">A dedicated program for building raw strength while protecting long-term joint health — for athletes who train for years, not months.</p>
+      <ul class="text-steel text-sm space-y-2 mb-6">
+        <li>— Progressive overload tracking</li>
+        <li>— Mobility &amp; recovery protocols built in</li>
+        <li>— Ideal for ages 30+ or returning athletes</li>
+      </ul>
+      <a href="contact.html" class="font-display text-gold text-sm border-b border-gold pb-1 hover:text-goldSoft transition-colors">GET STARTED →</a>
+    </div>
+
+    <div class="card-panel rounded-lg p-10">
+      <p class="font-display text-gold text-sm mb-4">04 — NUTRITION</p>
+      <h3 class="font-display font-bold text-2xl mb-4">Nutrition Coaching</h3>
+      <p class="text-steel leading-relaxed mb-6">Meal structures and macro guidance built around your actual training load — not a generic diet plan copy-pasted for every member.</p>
+      <ul class="text-steel text-sm space-y-2 mb-6">
+        <li>— Personalized macro targets</li>
+        <li>— Weekly check-ins &amp; adjustments</li>
+        <li>— Works alongside any training program</li>
+      </ul>
+      <a href="contact.html" class="font-display text-gold text-sm border-b border-gold pb-1 hover:text-goldSoft transition-colors">GET STARTED →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== PROGRAM HIGHLIGHT ===================== -->
+<section class="reveal bg-obsidianSoft py-24 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <div class="aspect-[4/5] bg-obsidian border border-white/10 rounded-lg overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1000" alt="Male athlete doing a pull-up during a strength session, face and body visible" class="img-intense w-full h-full object-cover">
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow mb-4">Most Popular</p>
+      <h2 class="font-display font-bold text-3xl md:text-4xl mb-6 leading-tight">
+        Personal Training is where most athletes start.
+      </h2>
+      <p class="text-steel leading-relaxed mb-6">
+        No group program can account for your injury history, your schedule, or the fact that your left shoulder doesn't move like your right one. Personal Training starts with an honest assessment, then builds a program around what your body can actually handle today — and pushes it further every week.
+      </p>
+      <a href="membership.html" class="btn-primary inline-block px-8 py-3.5 text-sm">VIEW PRICING</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="reveal bg-gold text-obsidian py-20 px-6 md:px-12 text-center">
+  <h2 class="font-display font-extrabold text-3xl md:text-5xl mb-6">NOT SURE WHICH PROGRAM FITS?</h2>
+  <p class="max-w-lg mx-auto mb-8 opacity-80">Book a free assessment and we'll build a plan around your goal — no pressure, no sales pitch.</p>
+  <a href="contact.html" class="inline-block bg-obsidian text-bone font-display px-8 py-3.5 text-sm tracking-wide hover:bg-iron transition-colors">
+    BOOK FREE ASSESSMENT
+  </a>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="px-6 md:px-12 py-16 border-t border-white/10">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 mb-12">
+    <div>
+      <p class="font-display text-xl font-bold mb-4">IRON<span class="text-gold">CORE</span></p>
+      <p class="text-steel text-sm leading-relaxed">Elite strength and performance training for people serious about results.</p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-gold mb-4 tracking-wide">NAVIGATE</p>
+      <ul class="space-y-2 text-steel text-sm">
+        <li><a href="about.html" class="hover:text-bone transition-colors">About</a></li>
+        <li><a href="programs.html" class="hover:text-bone transition-colors">Programs</a></li>
+        <li><a href="membership.html" class="hover:text-bone transition-colors">Membership</a></li>
+        <li><a href="trainers.html" class="hover:text-bone transition-colors">Trainers</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display text-sm text-gold mb-4 tracking-wide">CONTACT</p>
+      <ul class="space-y-2 text-steel text-sm">
+        <li>123 Strength Ave, Faisalabad</li>
+        <li>hello@ironcore.fit</li>
+        <li>+92 300 1234567</li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display text-sm text-gold mb-4 tracking-wide">FOLLOW</p>
+      <ul class="space-y-2 text-steel text-sm">
+        <li><a href="#" class="hover:text-bone transition-colors">Instagram</a></li>
+        <li><a href="#" class="hover:text-bone transition-colors">Facebook</a></li>
+        <li><a href="#" class="hover:text-bone transition-colors">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 text-steel text-xs text-center">
+    &copy; 2026 IronCore Gym. All rights reserved.
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

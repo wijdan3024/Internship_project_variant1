@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — IronCore Gym</title>
+<meta name="description" content="Get in touch with IronCore Gym — book your free session or ask a question.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          obsidian: '#0B0C0E', obsidianSoft: '#131417', bone: '#F5F3EE',
+          steel: '#8A8F98', gold: '#B8863B', goldSoft: '#D4A857', iron: '#7A1F1F',
+        },
+        fontFamily: { display: ['Syne', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+      }
+    }
+  }
+</script>
+</head>
+
+<body class="font-body bg-obsidian text-bone">
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 px-6 md:px-12 py-5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="index.html" class="font-display text-xl md:text-2xl font-bold tracking-tight">
+      IRON<span class="text-gold">CORE</span>
+    </a>
+    <div class="hidden md:flex items-center gap-10 font-display text-sm tracking-wide">
+      <a href="index.html" class="nav-link text-bone hover:text-gold transition-colors">Home</a>
+      <a href="about.html" class="nav-link text-bone hover:text-gold transition-colors">About</a>
+      <a href="programs.html" class="nav-link text-bone hover:text-gold transition-colors">Programs</a>
+      <a href="membership.html" class="nav-link text-bone hover:text-gold transition-colors">Membership</a>
+      <a href="trainers.html" class="nav-link text-bone hover:text-gold transition-colors">Trainers</a>
+      <a href="contact.html" class="nav-link text-gold">Contact</a>
+    </div>
+    <a href="contact.html" class="hidden md:inline-block btn-primary px-6 py-2.5 text-sm">JOIN NOW</a>
+    <button id="menuBtn" class="md:hidden text-bone" aria-label="Open menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden mt-4 bg-obsidianSoft border border-white/10 rounded-lg p-6 flex flex-col gap-4 font-display text-sm">
+    <a href="index.html" class="text-bone hover:text-gold">Home</a>
+    <a href="about.html" class="text-bone hover:text-gold">About</a>
+    <a href="programs.html" class="text-bone hover:text-gold">Programs</a>
+    <a href="membership.html" class="text-bone hover:text-gold">Membership</a>
+    <a href="trainers.html" class="text-bone hover:text-gold">Trainers</a>
+    <a href="contact.html" class="btn-primary text-center py-2.5">JOIN NOW</a>
+  </div>
+</nav>
+
+<!-- ===================== PAGE HERO ===================== -->
+<header class="hero-grid pt-40 pb-20 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <p class="eyebrow mb-4">Get In Touch</p>
+      <h1 class="font-display font-extrabold text-5xl md:text-6xl leading-tight">
+        Your first session is free. Let's book it.
+      </h1>
+    </div>
+    <div class="reveal hidden md:block" style="transition-delay:0.15s">
+      <div class="aspect-[4/3] bg-obsidianSoft border border-white/10 rounded-lg overflow-hidden">
+        <img src="assets/images/gym-boy-dumbbell.png" alt="Male athlete training at IronCore gym, face and body visible" class="img-intense w-full h-full object-cover">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== CONTACT FORM + INFO ===================== -->
+<section class="reveal max-w-7xl mx-auto px-6 md:px-12 py-16 grid md:grid-cols-2 gap-16">
+
+  <!-- Form -->
+  <div>
+    <h2 class="font-display font-bold text-2xl mb-8">Send us a message</h2>
+    <form id="contactForm" class="space-y-6" novalidate>
+      <div>
+        <label for="name" class="font-display text-sm text-steel block mb-2">FULL NAME</label>
+        <input type="text" id="name" name="name" required
+          class="w-full bg-obsidianSoft border border-white/10 rounded-lg px-4 py-3 text-bone focus:outline-none focus:border-gold transition-colors"
+          placeholder="Your name">
+      </div>
+      <div>
+        <label for="email" class="font-display text-sm text-steel block mb-2">EMAIL</label>
+        <input type="email" id="email" name="email" required
+          class="w-full bg-obsidianSoft border border-white/10 rounded-lg px-4 py-3 text-bone focus:outline-none focus:border-gold transition-colors"
+          placeholder="you@example.com">
+      </div>
+      <div>
+        <label for="message" class="font-display text-sm text-steel block mb-2">MESSAGE</label>
+        <textarea id="message" name="message" rows="5" required
+          class="w-full bg-obsidianSoft border border-white/10 rounded-lg px-4 py-3 text-bone focus:outline-none focus:border-gold transition-colors resize-none"
+          placeholder="Tell us about your training goal..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary w-full py-3.5 text-sm">SEND MESSAGE</button>
+      <p id="formStatus" class="hidden text-sm font-display"></p>
+    </form>
+  </div>
+
+  <!-- Info -->
+  <div>
+    <h2 class="font-display font-bold text-2xl mb-8">Visit or reach us</h2>
+
+    <div class="space-y-6 mb-10">
+      <div class="card-panel rounded-lg p-6">
+        <p class="font-display text-gold text-sm mb-1">LOCATION</p>
+        <p class="text-steel">123 Strength Ave, Faisalabad, Punjab</p>
+      </div>
+      <div class="card-panel rounded-lg p-6">
+        <p class="font-display text-gold text-sm mb-1">PHONE</p>
+        <p class="text-steel">+92 300 1234567</p>
+      </div>
+      <div class="card-panel rounded-lg p-6">
+        <p class="font-display text-gold text-sm mb-1">EMAIL</p>
+        <p class="text-steel">hello@ironcore.fit</p>
+      </div>
+      <div class="card-panel rounded-lg p-6">
+        <p class="font-display text-gold text-sm mb-1">HOURS</p>
+        <p class="text-steel">Open 24/7 for Pro &amp; Elite members<br>Basic: 6:00 AM – 11:00 PM daily</p>
+      </div>
+    </div>
+
+    <div class="aspect-video bg-obsidianSoft border border-white/10 rounded-lg overflow-hidden">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13606.0!2d72.9!3d31.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDI0JzAwLjAiTiA3MsKwNTQnMDAuMCJF!5e0!3m2!1sen!2s!4v1234567890"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        title="IronCore Gym Location">
+      </iframe>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="reveal bg-gold text-obsidian py-20 px-6 md:px-12 text-center">
+  <h2 class="font-display font-extrabold text-3xl md:text-5xl mb-6">STILL DECIDING?</h2>
+  <p class="max-w-lg mx-auto mb-8 opacity-80">Walk in for a free tour — no appointment needed during open hours.</p>
+  <a href="membership.html" class="inline-block bg-obsidian text-bone font-display px-8 py-3.5 text-sm tracking-wide hover:bg-iron transition-colors">
+    VIEW MEMBERSHIP PLANS
+  </a>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="px-6 md:px-12 py-16 border-t border-white/10">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 mb-12">
+    <div>
+      <p class="font-display text-xl font-bold mb-4">IRON<span class="text-gold">CORE</span></p>
+      <p class="text-steel text-sm leading-relaxed">Elite strength and performance training for people serious about results.</p>
+    </div>
+    <div>
+      <p class="font-display text-sm text-gold mb-4 tracking-wide">NAVIGATE</p>
+      <ul class="space-y-2 text-steel text-sm">
+        <li><a href="about.html" class="hover:text-bone transition-colors">About</a></li>
+        <li><a href="programs.html" class="hover:text-bone transition-colors">Programs</a></li>
+        <li><a href="membership.html" class="hover:text-bone transition-colors">Membership</a></li>
+        <li><a href="trainers.html" class="hover:text-bone transition-colors">Trainers</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display text-sm text-gold mb-4 tracking-wide">CONTACT</p>
+      <ul class="space-y-2 text-steel text-sm">
+        <li>123 Strength Ave, Faisalabad</li>
+        <li>hello@ironcore.fit</li>
+        <li>+92 300 1234567</li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-display text-sm text-gold mb-4 tracking-wide">FOLLOW</p>
+      <ul class="space-y-2 text-steel text-sm">
+        <li><a href="#" class="hover:text-bone transition-colors">Instagram</a></li>
+        <li><a href="#" class="hover:text-bone transition-colors">Facebook</a></li>
+        <li><a href="#" class="hover:text-bone transition-colors">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto pt-8 border-t border-white/5 text-steel text-xs text-center">
+    &copy; 2026 IronCore Gym. All rights reserved.
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
