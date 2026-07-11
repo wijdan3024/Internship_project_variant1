@@ -1,0 +1,163 @@
+/* ===================================
+   IRONCORE — Elite Minimal Variant
+   Design Tokens & Base Styles
+=================================== */
+
+:root {
+  --color-obsidian: #0B0C0E;
+  --color-obsidian-soft: #131417;
+  --color-bone: #F5F3EE;
+  --color-steel: #8A8F98;
+  --color-gold: #B8863B;
+  --color-gold-soft: #D4A857;
+  --color-iron: #7A1F1F;
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-obsidian);
+  color: var(--color-bone);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* ===== Custom scrollbar ===== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-obsidian); }
+::-webkit-scrollbar-thumb { background: var(--color-gold); border-radius: 4px; }
+
+/* ===== Signature element: Tempo Bar ===== */
+.tempo-bar {
+  writing-mode: vertical-rl;
+  letter-spacing: 0.35em;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--color-gold);
+  border-left: 1px solid rgba(184, 134, 59, 0.35);
+  padding-left: 1rem;
+}
+
+.tempo-bar span {
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* ===== Reusable components ===== */
+.btn-primary {
+  background-color: var(--color-gold);
+  color: var(--color-obsidian);
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: var(--color-iron);
+  color: var(--color-bone);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background-color: var(--color-gold);
+  color: var(--color-obsidian);
+}
+
+.card-panel {
+  background-color: var(--color-obsidian-soft);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.card-panel:hover {
+  border-color: rgba(184, 134, 59, 0.5);
+  transform: translateY(-4px);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  color: var(--color-gold);
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+/* ===== Navbar ===== */
+#navbar {
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease, padding 0.4s ease;
+}
+#navbar.scrolled {
+  background-color: rgba(11, 12, 14, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(184, 134, 59, 0.15);
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-gold);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== Scroll reveal animations ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Hero background texture ===== */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(184,134,59,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,134,59,0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ===== Intense B&W image treatment ===== */
+.img-intense {
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter 0.6s ease, transform 0.6s ease;
+}
+.img-intense:hover {
+  filter: grayscale(0%) contrast(1.05);
+  transform: scale(1.03);
+}
+
+/* ===== Accessibility ===== */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
